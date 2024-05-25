@@ -1,7 +1,7 @@
 import { Flowbite } from "flowbite-react";
 import { Navbar } from "./shared/components/NavBar";
 import HomePage from "./pages/home/HomePage";
-import { Route as WouterRoute } from "wouter";
+import { Redirect, Route as WouterRoute } from "wouter";
 import ProfessonalExperiencePage from "./pages/professional-experience/ProfessionalExperiencePage";
 import CoursesPage from "./pages/courses/CoursesPage";
 import AcademicBackgroundPage from "./pages/academic-background/AcademicBackgroundPage";
@@ -19,6 +19,9 @@ export default function App() {
         <WouterRoute path={routes.COURSES} component={CoursesPage} />
         <WouterRoute path={routes.ACADEMIC_BACKGROUND} component={AcademicBackgroundPage} />
         <WouterRoute path={routes.SKILLS} component={SkillsPage} />
+        <WouterRoute>
+          {() => <Redirect to={routes.HOME} />}
+        </WouterRoute>
       </div>
     </Flowbite>
 
