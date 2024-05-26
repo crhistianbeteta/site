@@ -2,7 +2,7 @@ import { Timeline } from "flowbite-react";
 import { academicBackground } from "../../data/data";
 
 export default function
-    AcademicBackgroundPage() {
+    AcademicBackgroundPage({ translate }: { translate: (key: string) => string }) {
     return (
         <section className="p-2 flex justify-center">
             <Timeline className="w-2/3">
@@ -12,9 +12,9 @@ export default function
                         <Timeline.Point />
                         <Timeline.Content>
                             <Timeline.Time>{item.beginYear}-{item.endYear}</Timeline.Time>
-                            <Timeline.Title>{item.title}</Timeline.Title>
+                            <Timeline.Title>{translate(item.title)}</Timeline.Title>
                             <Timeline.Body className="text-justify">
-                                {item.description}
+                                {translate(item.description)}
                             </Timeline.Body>
                         </Timeline.Content>
                     </Timeline.Item>

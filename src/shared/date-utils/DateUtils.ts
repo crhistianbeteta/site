@@ -6,6 +6,7 @@ import en from "dayjs/locale/en"
 dayjs.extend(relativeTime)
 const locales: { [key: string]: ILocale } = {
   "es": es,
+  "es-ES": es,
   "default": en
 }
 
@@ -23,12 +24,3 @@ export const calculateTime = (beginDate: string, endDate: string, locale: string
   return finishDate.from(startDate, true)
 
 }
-
-// function getMonthDifference(startDate: string, endDate: string): string {
-
-//   return (
-//     (endDate.getMonth()) -
-//     (startDate.getMonth()) +
-//     12 * (endDate.getFullYear() - startDate.getFullYear()) + 1
-//   );
-// }

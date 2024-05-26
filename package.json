@@ -14,8 +14,11 @@
     "flowbite": "2.3.0",
     "flowbite-react": "0.9.0",
     "gh-pages": "^6.1.1",
+    "i18next": "^23.11.5",
+    "i18next-browser-languagedetector": "^8.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^14.1.2",
     "wouter": "3.1.3"
   },
   "devDependencies": {

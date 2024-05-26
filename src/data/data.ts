@@ -2,7 +2,7 @@ import { now } from "../shared/date-utils/DateUtils";
 
 export const skills = [
     {
-        title: "Programación",
+        title: "skills.programming.title",
         items: [
             { name: "Java" },
             { name: "JavaScript" },
@@ -23,7 +23,7 @@ export const skills = [
     },
 
     {
-        title: "Sistemas operativos",
+        title: "skills.os.title",
         items: [
             { name: "Windows" },
             { name: "Linux" },
@@ -32,17 +32,17 @@ export const skills = [
     },
 
     {
-        title: "Idiomas",
-        items: [{ name: "Castellano" }, { name: "Ingles" }],
+        title: "skills.languages.title",
+        items: [{ name: "skills.languages.es" }, { name: "skills.languages.en" }],
     },
 
     {
-        title: "Frameworks FrontEnd",
+        title: "FrontEnd",
         items: [{ name: "Angular" }, { name: "React" }, { name: "Oracle JET" }],
     },
 
     {
-        title: "Frameworks Backend",
+        title: "Backend",
         items: [{ name: "Spring Boot" }, { name: "Node JS" }, { name: "Nest JS" }],
     },
 ];
@@ -92,24 +92,21 @@ export const courses = [
 
 export const academicBackground = [
     {
-        title: "Máster en Ingenieria Informática",
-        description:
-            "Los estudios fueron cursados en la Escuela Superior de Informática de la Universidad de Castilla-La Mancha, abordando una variedad de temas como realidad virtual, contenerización, computación de altas prestaciones y gestión de proyectos. Sin embargo, el énfasis principal se centró en la computación cuántica, tema explorado en el trabajo de fin de máster (TFM), que recibió la máxima calificación.",
+        title: "academic_background.master.title",
+        description: "academic_background.master.description",
         beginYear: 2020,
         endYear: 2022,
     },
 
     {
-        title: "Grado en Ingenieria Informática",
-        description:
-            "Cursado en la Escuela Superior de Informática de la Universidad de Castilla-La Mancha. La intensificación escogida fue la de Tecnologías de la Información. En esta etapa, me gustaría destacar la obtención de la matrícula de honor en mi trabajo fin de grado (TFG): Asistente virtual para onboarding y soporte a empleados.",
+        title: "academic_background.degree.title",
+        description: "academic_background.master.description",
         beginYear: 2015,
         endYear: 2020,
     },
     {
-        title: "Bachillerato",
-        description:
-            "Bachillerato (Científico - Tecnológico) cursado en I.E.S Estados del Duque. Siempre me habían gustado mucho las asignaturas de matemáticas, física e informática. Por este motivo, me entró mucha curiosidad por el mundo de las tecnologías de información y decidí adentrarme más en ese mundo.",
+        title: "academic_background.high_school.title",
+        description: "academic_background.high_school.description",
         beginYear: 2013,
         endYear: 2015,
     },
@@ -152,7 +149,7 @@ export const professionalExperience = [
         beginDate: "2020-02-01",
         endDate: "2020-07-31",
         location: "Madrid",
-        jobTitle: "Becario",
+        jobTitle: "Developer",
         technologies: [
             "NodeJS",
             "Express",

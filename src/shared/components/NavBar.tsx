@@ -3,8 +3,9 @@ import { DarkThemeToggle, Navbar as FlowBiteNavbar } from "flowbite-react";
 import { Link as WouterLink, useLocation } from "wouter"
 import logo from "../../assets/logo.png";
 import { routes } from "../../routes/routes";
+import LanguageDropdown from "./LanguageDropdown";
 
-export function Navbar() {
+export function Navbar({ translate }: { translate: (key: string) => string }) {
 
 
     const [location] = useLocation();
@@ -22,8 +23,11 @@ export function Navbar() {
             </div>
 
 
-            <div className="flex md:order-2 flex-1  justify-end">
-                <FlowBiteNavbar.Toggle />
+            <div className="flex md:order-2 flex-1 justify-end">
+                <FlowBiteNavbar.Toggle className="p-2.5" />
+
+                <LanguageDropdown  ></LanguageDropdown>
+
                 <DarkThemeToggle />
             </div>
 
@@ -31,32 +35,33 @@ export function Navbar() {
             <FlowBiteNavbar.Collapse>
                 <WouterLink href="/" >
                     <FlowBiteNavbar.Link active={location === routes.HOME}>
-                        Inicio
+                        {translate('pages.home')}
                     </FlowBiteNavbar.Link>
                 </WouterLink>
 
                 <WouterLink href="/professional-experience">
                     <FlowBiteNavbar.Link active={location === routes.PROFESSIONAL_EXPERIENCE}>
-                        Experiencia
+                        {translate('pages.experience')}
                     </FlowBiteNavbar.Link>
                 </WouterLink>
                 <WouterLink href="/courses">
                     <FlowBiteNavbar.Link active={location === routes.COURSES}>
-                        Cursos
+                        {translate('pages.courses')}
                     </FlowBiteNavbar.Link>
                 </WouterLink>
 
                 <WouterLink href="/academic-background">
                     <FlowBiteNavbar.Link active={location === routes.ACADEMIC_BACKGROUND}>
-                        Formación
+                        {translate('pages.academic_background')}
                     </FlowBiteNavbar.Link>
                 </WouterLink>
 
                 <WouterLink href="/skills" >
                     <FlowBiteNavbar.Link active={location === routes.SKILLS}>
-                        Habilidades
+                        {translate('pages.skills')}
                     </FlowBiteNavbar.Link>
                 </WouterLink>
+
 
             </FlowBiteNavbar.Collapse>
         </FlowBiteNavbar>

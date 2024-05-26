@@ -3,17 +3,18 @@ import { professionalExperience } from "../../data/data"
 import { Badge } from "flowbite-react";
 import { calculateTime } from "../../shared/date-utils/DateUtils";
 
-export default function ProfessonalExperiencePage() {
+export default function ProfessionalExperiencePage({ locale }: { locale: string }) {
+
+
     return (
         <section className="flex flex-col gap-2 p-2 items-center">
-
             {professionalExperience.map(p => (
-                <Card className="w-2/3 p-2">
+                <Card key={p.companyName} className="w-2/3 p-2">
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {p.companyName}
                     </h5>
                     <p className="font-thin text-gray-700 dark:text-gray-400">
-                        {calculateTime(p.beginDate, p.endDate, 'es')}
+                        {calculateTime(p.beginDate, p.endDate, locale)}
                     </p>
                     <p className="font-bold text-gray-700 dark:text-gray-400">
                         {p.jobTitle}
@@ -24,7 +25,7 @@ export default function ProfessonalExperiencePage() {
 
                         {p.technologies.map(t => (
 
-                            <Badge size={"sm"}>{t}</Badge>
+                            <Badge key={p.companyName.concat(t)} size={"sm"}>{t}</Badge>
                         ))}
 
                     </div>
