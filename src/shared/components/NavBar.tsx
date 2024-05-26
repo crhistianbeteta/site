@@ -29,7 +29,7 @@ export function Navbar() {
             <FlowBiteNavbar.Collapse>
                 <WouterLink href="/" >
                     <FlowBiteNavbar.Link active={location === routes.HOME}>
-                        Home
+                        Inicio
                     </FlowBiteNavbar.Link>
                 </WouterLink>
 
