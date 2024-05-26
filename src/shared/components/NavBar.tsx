@@ -10,21 +10,23 @@ export function Navbar() {
     const [location] = useLocation();
 
     return (
-        <FlowBiteNavbar fluid rounded >
+        <FlowBiteNavbar fluid  >
 
-            <WouterLink href="/">
-                <FlowBiteNavbar.Brand>
-                    <img src={logo} className="mr-3 h-6 sm:h-9" alt="Crhistian Beteta Logo" />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Crhistian Beteta</span>
-                </FlowBiteNavbar.Brand>
-            </WouterLink>
+            <div className="flex-1">
+                <WouterLink href="/">
+                    <FlowBiteNavbar.Brand>
+                        <img src={logo} className="mr-3 h-6 sm:h-9" alt="Crhistian Beteta Logo" />
+                        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Crhistian Beteta</span>
+                    </FlowBiteNavbar.Brand>
+                </WouterLink>
+            </div>
 
-            <div className="flex md:order-2">
+
+            <div className="flex md:order-2 flex-1  justify-end">
                 <FlowBiteNavbar.Toggle />
                 <DarkThemeToggle />
-
-
             </div>
+
 
             <FlowBiteNavbar.Collapse>
                 <WouterLink href="/" >
